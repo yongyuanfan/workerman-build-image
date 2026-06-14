@@ -10,7 +10,7 @@ COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-COPY . /app
+COPY app /app
 
 WORKDIR /app
 

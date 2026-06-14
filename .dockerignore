@@ -1,0 +1,9 @@
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+*.log
+.env
+.DS_Store
+.idea/
+.vscode/
