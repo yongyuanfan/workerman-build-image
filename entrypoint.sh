@@ -12,6 +12,11 @@ if [ ! -f ".env" ] && [ -f ".env.example" ]; then
     cp .env.example .env
 fi
 
+# 如果传入了命令（如 sh），则执行该命令
+if [ $# -gt 0 ]; then
+    exec "$@"
+fi
+
 php start.php start -d
 
 cleanup() {
