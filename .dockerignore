@@ -7,3 +7,6 @@ Dockerfile
 .DS_Store
 .idea/
 .vscode/
+
+# app
+app/vendor/

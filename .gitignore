@@ -4,4 +4,4 @@
 *.log
 
 # app
-/app/vendor/
+app/vendor/
