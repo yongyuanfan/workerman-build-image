@@ -21,7 +21,9 @@ php start.php start -d
 
 cleanup() {
     php start.php stop
+    exit 0
 }
 trap cleanup TERM INT
 
+tail -f /dev/null &
 wait
