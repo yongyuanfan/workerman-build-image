@@ -10,6 +10,8 @@ COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
+COPY . /app
+
 WORKDIR /app
 
 EXPOSE 2345
