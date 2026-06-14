@@ -6,18 +6,16 @@
 
 ```
 ├── Dockerfile           # Docker 镜像构建文件
-├── composer             # Composer 可执行文件（静态编译）
-├── php                  # PHP 可执行文件（静态编译）
-├── entrypoint.sh        # 容器入口脚本
 ├── .dockerignore        # Docker 构建忽略规则
 ├── .gitattributes       # Git 换行符配置
+├── bin/                 # 可执行文件
+│   ├── php              # PHP 可执行文件（静态编译）
+│   ├── composer         # Composer 可执行文件（静态编译）
+│   └── entrypoint.sh    # 容器入口脚本
 └── app/                 # 应用代码
     ├── start.php        # 入口文件
     ├── composer.json    # Composer 依赖配置
-    ├── composer.lock
-    ├── vendor/          # Composer 依赖
-    ├── runtime/         # 运行时目录
-    └── storage/         # 存储目录
+    └── composer.lock
 ```
 
 ## 构建镜像
@@ -71,12 +69,12 @@ services:
 
 ## Windows 用户注意事项
 
-`entrypoint.sh` 和 `Dockerfile` 必须使用 **LF 换行符**（Unix 格式），否则容器启动会失败。
+`bin/entrypoint.sh` 和 `Dockerfile` 必须使用 **LF 换行符**（Unix 格式），否则容器启动会失败。
 
 `.gitattributes` 已配置自动处理，确保 Git 检出时保持 LF：
 
 ```bash
-entrypoint.sh text eol=lf
+bin/entrypoint.sh text eol=lf
 Dockerfile text eol=lf
 ```
 
