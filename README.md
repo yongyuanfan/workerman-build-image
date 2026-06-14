@@ -26,6 +26,15 @@
 docker build -t workerman-php .
 ```
 
+# 构建多平台镜像并推送到镜像仓库
+
+```bash
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t yongyuanfan/workerman-php:8.4.4.beta2 \
+  --push .
+```
+
 ## 运行容器
 
 启动服务：

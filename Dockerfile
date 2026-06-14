@@ -2,11 +2,11 @@ FROM alpine:3.24.0
 
 RUN apk update && apk upgrade --no-cache
 
-COPY ./php /bin/php
+COPY ./bin/php /bin/php
 
-COPY ./composer /bin/composer
+COPY ./bin/composer /bin/composer
 
-COPY ./entrypoint.sh /entrypoint.sh
+COPY ./bin/entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
