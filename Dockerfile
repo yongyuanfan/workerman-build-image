@@ -16,4 +16,4 @@ WORKDIR /app
 
 EXPOSE 2345
 
-CMD ["/bin/sh", "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
