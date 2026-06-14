@@ -2,3 +2,6 @@
 /.idea
 /.vscode
 *.log
+
+# app
+/app/vendor/
